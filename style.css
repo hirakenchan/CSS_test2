@@ -3,6 +3,7 @@ html {
     scroll-behavior: smooth;
 }
 
+/* 全体のフォント指定 */
 body {
     font-family: "Noto Sans JP", sans-serif;
 }
@@ -52,6 +53,21 @@ header {
     font-size: 20px;
 }
 
+/* ヘッダーリストのアニメーション */
+.list:hover {
+    color: white;
+}
+
+.list_box:hover {
+    animation:move 0.4s ease;
+}
+ 
+@keyframes move {
+    0%   { transform:translate(0, 0); }
+    50%  {transform:translate(6px, -10px) scale(1.2); }
+    100% { transform:translate(0, 0); }
+}
+
 
 /* メインコンテナ */
 .main_container {
@@ -73,6 +89,36 @@ header {
     transform: translate(-50%, -50%);
 }
 
+/* メインコンテナのメッセージをフェードイン */
+.fade1 {
+    animation-name: fadeIn1;
+    animation-duration: 5s;
+    animation-timing-function: ease;
+    animation-delay: 0.2s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: backwards;
+}
+.fade2 {
+    animation-name: fadeIn1;
+    animation-duration: 5s;
+    animation-timing-function: ease;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: backwards;
+}
+@keyframes fadeIn1 {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .main_message {
     font-size: 40px;
 }
@@ -81,10 +127,44 @@ header {
     margin-top: 10px;
 }
 
+/* コンテナ共通設定 */
 .container {
     padding: 100px;
 }
 
+/* 初めは各コンテナのタイトルを消しておき、上下左右から出現させる */
+.fade_item1 {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1.2s;
+    transform: translateY(150px);
+}
+.fade_item2 {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1.2s;
+    transform: translateX(150px);
+}
+.fade_item3 {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1.2s;
+    transform: translateX(-150px);
+}
+.fade_item4 {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1.2s;
+    transform: translateY(-150px);
+}
+
+/* JavaScriptで発生させる */
+.is-active {
+    transition-delay: 0.2s;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
 
 /* 趣味コンテナ */
 .hobby_container {
@@ -104,6 +184,7 @@ header {
     text-shadow: 1px 1px 1px gray;
 }
 
+/* アニメパートとゲームパートの共通設定 */
 .item {
     margin-top: 100px;
     display: flex;
@@ -176,19 +257,43 @@ header {
 }
 
 .reason_comment {
-    font-size: 20px;
     margin: auto 20px;
 }
 
-.reason_comment span {
+.reason_text {
+    font-size: 18px;
+}
+
+.reason_important {
     font-size: 24px;
     text-shadow: 1px 1px 1px gray;
+}
+
+/* テキストにラインアニメーション */
+.line_before1 {
+	background: linear-gradient(yellow, yellow) 0 100% / 0 15px no-repeat;
+	transition: background 8s;
+	text-decoration: none;
+}
+.line_before2 {
+	background: linear-gradient(orange, orange) 0 100% / 0 15px no-repeat;
+	transition: background 2s;
+	text-decoration: none;
+}
+
+.line_after1 {
+    transition-delay: 2s;
+	background-size: 100% 15px;
+}
+.line_after2 {
+    transition-delay: 10s;
+	background-size: 100% 15px;
 }
 
 
 /* 目標コンテナ */
 .goal_container {
-    background-color: #FBF8EF;
+    background-color: #FDF7F4;
 }
 
 .goal_title {
@@ -207,11 +312,24 @@ header {
     justify-content: center;
 }
 
+/* テキストに背景をつけ、アニメーションさせる */
 .goal_comment {
-    font-size: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    background: url("./image/BG/BG_textColor.jpg") repeat-x;
+    background-clip: text;
+    background-position: 0% 0%;
+    color: transparent;
     margin: auto 20px;
+    animation: BG_move 20s linear infinite;
 }
 
+@keyframes BG_move {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+/* 写真コンテナ */
 .photo_container {
     background-image: url("./image/BG/BG_color.png");
     background-color: rgba(255, 255, 255, 0.3);
@@ -261,6 +379,7 @@ header {
     overflow: hidden;
 }
 
+/* 写真ホバー時にテキストを表示 */
 .photo .mask {
     width: 100%;
     height: 100%;
@@ -279,21 +398,7 @@ header {
     opacity: 1;
 }
 
-footer {
-    background-color: #A59D84;
-    padding: 20px;
-    text-align: center;
-}
-
-.footer_icon{
-    margin-bottom: 10px;
-}
-
-.icon {
-    color: black;
-    padding: 0 10px;
-}
-
+/* モーダル部分 */
 .modal {
     position: fixed;
     z-index: 1;
@@ -307,30 +412,89 @@ footer {
     overflow: auto;
 }
 
-#family_modal {
-    display: none;
-}
-
 .modal_container {
     position: absolute;
-    background-image: url("./image/BG/BG_family.jpg");
     background-color: rgba(255, 255, 255, 0.5);
     background-blend-mode: lighten;
     background-size: cover;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 900px;
+    width: 980px;
     height: 520px;
     border-radius: 30px;
 }
 
-.closeBox {
+/* 各モーダルは事前に隠しておく */
+#family_modal, #dog_modal, #beer_modal, 
+#chiikawa_modal, #homeTown_modal, #unity_modal, 
+#rubikCube_modal, #ramen_modal, #book_modal {
+    display: none;
+}
+
+/* 各モーダルの背景画像 */
+#modal_container_1 {
+    background-image: url("./image/BG/BG_family.jpg");
+}
+#modal_container_2 {
+    background-image: url("./image/BG/BG_dog.jpg");
+}
+#modal_container_3 {
+    background-image: url("./image/BG/BG_beer.png");
+}
+#modal_container_4 {
+    background-image: url("./image/BG/BG_chiikawa.jpg");
+}
+#modal_container_5 {
+    background-image: url("./image/BG/BG_hometown.jpg");
+}
+#modal_container_6 {
+    background-image: url("./image/BG/BG_unity.jpg");
+}
+#modal_container_7 {
+    background-image: url("./image/BG/BG_rubikCube.jpg");
+}
+#modal_container_8 {
+    background-image: url("./image/BG/BG_ramen.jpg");
+}
+#modal_container_9 {
+    background-image: url("./image/BG/BG_book.jpg");
+}
+
+.modal_header {
     text-align: right;
-    background-color: #F29F58;
     padding: 10px 20px;
     border-bottom: 1px solid gray;
     border-radius: 30px 30px 0 0;
+}
+
+/* モーダル毎にヘッダー背景色を変更 */
+#family_modal_header {
+    background-color: #F29F58;
+}
+#dog_modal_header {
+    background-color: #C96868;
+}
+#beer_modal_header {
+    background-color: #8967B3;
+}
+#chiikawa_modal_header {
+    background-color: #FF8A8A;
+}
+#homeTown_modal_header {
+    background-color: #8EB486;
+}
+#unity_modal_header {
+    background-color: #0A5EB0;
+}
+#rubikCube_modal_header {
+    background-color: #F6F193;
+}
+#ramen_modal_header {
+    background-color: #EEC759;
+}
+#book_modal_header {
+    background-color: #9AA6B2;
 }
 
 .modal_close {
@@ -341,9 +505,8 @@ footer {
 
 .modal_contents {
     margin: 40px;
-    /* color: #F29F58; */
     color: white;
-    text-shadow: 2px 2px 2px black;
+    text-shadow: 1px 1px 20px black;
 }
 
 .modal_item {
@@ -358,8 +521,24 @@ footer {
 }
 
 .modal_comment {
-    font-size: 20px;
+    font-size: 24px;
     text-align: left;
     margin-left: 20px;
-    /* font-weight: bold; */
+    font-weight: bold;
+}
+
+/* フッター部分 */
+footer {
+    background-color: #A59D84;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer_icon{
+    margin-bottom: 10px;
+}
+
+.icon {
+    color: black;
+    padding: 0 10px;
 }

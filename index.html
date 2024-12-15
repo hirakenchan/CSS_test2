@@ -19,161 +19,183 @@
         </div>
         <div class="header_right">
             <ul>
-                <li><a href="#hobby" class="list">hobby</a></li>
-                <li><a href="#reason" class="list">reason</a></li>
-                <li><a href="#goal" class="list">goal</a></li>
-                <li><a href="#photo" class="list">photo</a></li>
+                <li class="list_box"><a href="#hobby" class="list">hobby</a></li>
+                <li class="list_box"><a href="#reason" class="list">reason</a></li>
+                <li class="list_box"><a href="#goal" class="list">goal</a></li>
+                <li class="list_box"><a href="#photo" class="list">photo</a></li>
             </ul>
         </div>
     </header>
+
+    <!-- メインコンテナ -->
     <div class="main_container">
         <div class="message">
-            <h1 class="main_message">今から私の自己紹介をします<br>よかったら見てってくだされ</h1>
-            <p class="sub_message">ただただ自己紹介しているだけですので、生暖かい目で見守ってください。。</p>
+            <h1 class="main_message fade1">今から私の自己紹介をします<br>よかったら見てってくだされ</h1>
+            <p class="sub_message fade2">ただただ自己紹介しているだけですので、生暖かい目で見守ってください。。</p>
         </div>
         
     </div>
+
+    <!-- 趣味コンテナ -->
     <div class="hobby_container container" id="hobby">
-        <h1 class="hobby_title">hobby - 趣味 -</h1>
-        <p class="hobby_subtitle">趣味があるから頑張れる。。いや、趣味のために頑張っている。。</p>
-        <div class="hobby_item item">
-            <div class="anime_part">
-                <h2 class="anime_title">アニメ</h2>
-                <img src="./image/anime.png" alt="" class="anime_image" width="600px" height="300px">
-                <p class="anime_comment">アニメは毎期始まる前に必ずまとめサイトをチェックして臨んでいます！！
-                                        <br>最近はジャンルを絞らずに少しでも気になったものは視聴するようにしています。
-                                        <br>どこに運命の出会いが待っているかわからないですからね！！
-                                        <br>今期は何といっても『リゼロ』です！！相変わらずの気味の悪さ。。最高です！！
-                                        <br>早く会いたいよぉ。。レムたん。。</p>
-            </div>
-            <div class="game_part">
-                <h2 class="game_title title">ゲーム</h2>
-                <img src="./image/game.jpg" alt="" class="game_image" width="600px" height="300px">
-                <p class="game_comment">ゲームも昔から大好き！！でも最近はなかなか時間がとれない。。
-                                        <br>それでもゲームからは離れたくないから細々とやっているのが『FF14』。
-                                        <br>所謂MMO RPGというやつだ。
-                                        <br>今までやったことなかったけど、ゲームの世界に他のプレイヤーがいて、
-                                        <br>それぞれがそれぞれ好きな事をやっているのを見ていると凄く面白い。。
-                                        <br>昨年は初めてゲームの世界で年越しをした。。笑</p>
+        <div class="fade_item1">
+            <h1 class="hobby_title">hobby - 趣味 -</h1>
+            <p class="hobby_subtitle">趣味があるから頑張れる。。いや、趣味のために頑張っている。。</p>
+            <div class="hobby_item item">
+                <div class="anime_part">
+                    <h2 class="anime_title">アニメ</h2>
+                    <img src="./image/anime.png" alt="" class="anime_image" width="600px" height="300px">
+                    <p class="anime_comment">アニメは毎期始まる前に必ずまとめサイトをチェックして臨んでいます！！
+                                            <br>最近はジャンルを絞らずに少しでも気になったものは視聴するようにしています。
+                                            <br>どこに運命の出会いが待っているかわからないですからね！！
+                                            <br>今期は何といっても『リゼロ』です！！相変わらずの気味の悪さ。。最高です！！
+                                            <br>早く会いたいよぉ。。レムたん。。</p>
+                </div>
+                <div class="game_part">
+                    <h2 class="game_title title">ゲーム</h2>
+                    <img src="./image/game.jpg" alt="" class="game_image" width="600px" height="300px">
+                    <p class="game_comment">ゲームも昔から大好き！！でも最近はなかなか時間がとれない。。
+                                            <br>それでもゲームからは離れたくないから細々とやっているのが『FF14』。
+                                            <br>所謂MMO RPGというやつだ。
+                                            <br>今までやったことなかったけど、ゲームの世界に他のプレイヤーがいて、
+                                            <br>それぞれがそれぞれ好きな事をやっているのを見ていると凄く面白い。。
+                                            <br>昨年は初めてゲームの世界で年越しをした。。笑</p>
+                </div>
             </div>
         </div>
     </div>
+
+    <!-- 志望理由コンテナ -->
     <div class="reason_container container" id="reason">
-        <h1 class="reason_title">reason - 志望理由 -</h1>
-        <p class="reason_subtitle">なぜ私が今更、この歳でエンジニアを目指す事にしたのか。。</p>
-        <div class="reason_item item">
-            <img src="./image/reason.jpg" alt="" class="reason_image" width="600px">
-            <p class="reason_comment">昔から何もないところから何かを生み出すのが好きだった。
-                                        <br>きっかけは前職で大型モニタにその日のスケジュールを表示するアプリを
-                                        <br>『C＃』と『Visual Studio』を使って作ってみてほしいと言われたことだった。
-                                        <br>時間がかかりながらも完成した時に周りに喜んでもらえたことが嬉しかった。
-                                        <br>あとExcelの書類作成ファイルで『VBA』での効率化を実施して
-                                        <br>本気で喜ばれたことも嬉しかった。
-                                        <br>
-                                        <br><span>自分で生み出したもので人に喜ばれる仕事がしたいと強く思った。</span></p>
+        <div class="fade_item2">
+            <h1 class="reason_title">reason - 志望理由 -</h1>
+            <p class="reason_subtitle">なぜ私が今更、この歳でエンジニアを目指す事にしたのか。。</p>
+            <div class="reason_item item">
+                <img src="./image/reason.jpg" alt="" class="reason_image" width="600px">
+                <p class="reason_comment"><span class="reason_text line_before1">昔から何もないところから何かを生み出すのが好きだった。
+                                            <br>きっかけは前職で大型モニタにその日のスケジュールを表示するアプリを
+                                            <br>『C＃』と『Visual Studio』を使って作ってみてほしいと言われたことだった。
+                                            <br>
+                                            <br>時間がかかりながらも完成した時に周りに喜んでもらえたことが嬉しかった。
+                                            <br>
+                                            <br>あとExcelの書類作成ファイルで『VBA』での効率化を実施して
+                                            <br>本気で喜ばれたことも嬉しかった。</span>
+                                            <br>
+                                            <br>
+                                            <br><span class="reason_important line_before2">自分で作ったもので人に喜ばれる仕事がしたいと強く思った。</span></p>
+            </div>
         </div>
     </div>
+
+    <!-- 目標コンテナ -->
     <div class="goal_container container" id="goal">
-        <h1 class="goal_title">goal - 今後の抱負・目標 -</h1>
-        <p class="goal_subtitle">これからどうなっていきたいのか。。</p>
-        <div class="goal_item item">
-            <p class="goal_comment">最短で研修を終わらせて早くエンジニアになる！！
-                                    <br>目指せ！！研修3ヶ月で終了！！
-                                    <br>そのためにはまずはゴールを決めて、
-                                    <br>逆算してスケジュールを組まないといけない。
-                                    <br>
-                                    <br>もちろん研修中の業務も全力で取り組む！！
-                                    <br>業務内容も早く覚えて独り立ちする！！</p>
-                                    <img src="./image/goal.jpg" alt="" class="goal_image" width="500px">
+        <div class="fade_item3">
+            <h1 class="goal_title">goal - 今後の抱負・目標 -</h1>
+            <p class="goal_subtitle">これからどうなっていきたいのか。。</p>
+            <div class="goal_item item">
+                <p class="goal_comment">最短で研修を終わらせて早くエンジニアになる！！
+                                        <br>目指せ！！研修3ヶ月で終了！！
+                                        <br>そのためにはまずはゴールを決めて、
+                                        <br>逆算してスケジュールを組まないといけない。
+                                        <br>
+                                        <br>もちろん研修中の業務も全力で取り組む！！
+                                        <br>業務内容も早く覚えて独り立ちする！！</p>
+                                        <img src="./image/goal.jpg" alt="" class="goal_image" width="500px">
+            </div>
         </div>
     </div>
+
+    <!-- 写真コンテナ -->
     <div class="photo_container container" id="photo">
-        <h1 class="photo_title">photo - 写真 -</h1>
-        <p class="photo_subtitle">私を表す写真たち<br>(画像をクリックすると詳細がわかるよー。)</p>
-        <div class="photo_item item">
-            <div class="photo_1 photo">
-                <a href="" class="family_modal_open" onclick="modalOpen(); return false;">
-                    <img src="./image/family.jpg" alt="">
-                    <div class="mask">
-                        <div class="caption">家族</div>
-                    </div>
-                </a>
-            </div>
-            <div class="photo_2 photo">
-                <a href="">
-                    <img src="./image/nene.jpg" alt="">
-                    <div class="mask">
-                        <div class="caption">犬の散歩</div>
-                    </div>
-                </a>
-            </div>
-            <div class="photo_3 photo">
-                <a href="">
-                    <img src="./image/beer.jpg" alt="">
-                    <div class="mask">
-                        <div class="caption">飲み会</div>
-                    </div>
-                </a>
-            </div>
-            <div class="photo_4 photo">
-                <a href="">
-                    <img src="./image/chiikawa.jpg" alt="">
-                    <div class="mask">
-                        <div class="caption">ちいかわ</div>
-                    </div>
-                </a>
-            </div>
-            <div class="photo_5 photo">
-                <a href="">
-                    <img src="./image/curry.jpg" alt="">
-                    <div class="mask">
-                        <div class="caption">故郷</div>
-                    </div>
-                </a>
-            </div>
-            <div class="photo_6 photo">
-                <a href="">
-                    <img src="./image/unity.png" alt="">
-                    <div class="mask">
-                        <div class="caption">Unity</div>
-                    </div>
-                </a>
-            </div>
-            <div class="photo_7 photo">
-                <a href="">
-                    <img src="./image/rubikCube.jpg" alt="">
-                    <div class="mask">
-                        <div class="caption">ルービック　　キューブ</div>
-                    </div>
-                </a>
-            </div>
-            <div class="photo_8 photo">
-                <a href="">
-                    <img src="./image/ramen.jpg" alt="">
-                    <div class="mask">
-                        <div class="caption">好きな食べ物</div>
-                    </div>
-                </a>
-            </div>
-            <div class="photo_9 photo">
-                <a href="">
-                    <img src="./image/book.jpg" alt="">
-                    <div class="mask">
-                        <div class="caption">自己啓発本</div>
-                    </div>
-                </a>
+        <div class="fade_item4">
+            <h1 class="photo_title">photo - 写真 -</h1>
+            <p class="photo_subtitle">私を表す写真たち<br>(画像をクリックすると詳細がわかるよー。)</p>
+            <div class="photo_item item">
+                <div class="photo_1 photo photo_fade1">
+                    <a href="" id="family" onclick="modalOpen(family); return false;">
+                        <img src="./image/family.jpg" alt="">
+                        <!-- 写真ホバー時にテキストを表示 -->
+                        <div class="mask">
+                            <div class="caption">家族</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="photo_2 photo photo_fade2">
+                    <a href="" id="dog" onclick="modalOpen(dog); return false;">
+                        <img src="./image/nene.jpg" alt="">
+                        <div class="mask">
+                            <div class="caption">犬の散歩</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="photo_3 photo photo_fade3">
+                    <a href="" id="beer" onclick="modalOpen(beer); return false;">
+                        <img src="./image/beer.jpg" alt="">
+                        <div class="mask">
+                            <div class="caption">飲み会</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="photo_4 photo photo_fade4">
+                    <a href="" id="chiikawa" onclick="modalOpen(chiikawa); return false;">
+                        <img src="./image/chiikawa.jpg" alt="">
+                        <div class="mask">
+                            <div class="caption">ちいかわ</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="photo_5 photo photo_fade5">
+                    <a href="" id="homeTown" onclick="modalOpen(homeTown); return false;">
+                        <img src="./image/curry.jpg" alt="">
+                        <div class="mask">
+                            <div class="caption">故郷</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="photo_6 photo photo_fade6">
+                    <a href="" id="unity" onclick="modalOpen(unity); return false;">
+                        <img src="./image/unity.png" alt="">
+                        <div class="mask">
+                            <div class="caption">Unity</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="photo_7 photo photo_fade7">
+                    <a href="" id="rubikCube" onclick="modalOpen(rubikCube); return false;">
+                        <img src="./image/rubikCube.jpg" alt="">
+                        <div class="mask">
+                            <div class="caption">ルービック　　キューブ</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="photo_8 photo photo_fade8">
+                    <a href="" id="ramen" onclick="modalOpen(ramen); return false;">
+                        <img src="./image/ramen.jpg" alt="">
+                        <div class="mask">
+                            <div class="caption">好きな食べ物</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="photo_9 photo photo_fade9">
+                    <a href="" id="book" onclick="modalOpen(book); return false;">
+                        <img src="./image/book.jpg" alt="">
+                        <div class="mask">
+                            <div class="caption">自己啓発本</div>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- modal -->
     <div id="family_modal" class="modal">
-        <div class="modal_container">
-            <div class="closeBox">
+        <div id="modal_container_1" class="modal_container">
+            <div id="family_modal_header" class="modal_header">
                 <a href="" class="modal_close" onclick="modalClose(); return false;">✖</a>
             </div>
-            <div class="modal_contents">
-                <h1 class="modal_title">family - 家族 -</h1>
+            <div id="family_modal_contents" class="modal_contents">
+                <h1 class="modal_title">Family - 家族 -</h1>
                 <div class="modal_item">
                     <img src="./image/family.jpg" alt="" class="modal_image">
                     <p class="modal_comment">私を表すもの。まずはやはり『家族』。
@@ -189,21 +211,161 @@
         </div>
     </div>
     <div id="dog_modal" class="modal">
-        <div class="modal_container">
-            <div class="closeBox">
+        <div id="modal_container_2" class="modal_container">
+            <div id="dog_modal_header" class="modal_header">
                 <a href="" class="modal_close" onclick="modalClose(); return false;">✖</a>
             </div>
-            <div class="modal_contents">
-                <h1 class="modal_title">family - 家族 -</h1>
+            <div id="dog_modal_contents" class="modal_contents">
+                <h1 class="modal_title">Dog Walk - 犬の散歩 -</h1>
                 <div class="modal_item">
                     <img src="./image/nene.jpg" alt="" class="modal_image">
-                    <p class="modal_comment">私を表すもの。まずはやはり『家族』。
-                                            <br>妻と娘とワンちゃん（娘）がいる。
-                                            <br>家族がいるから毎日頑張れる！！
-                                            <br>家族の支えがあるから生きていける！！
-                                            <br>今は子供に、パパが人生楽しんでいるのを
-                                            <br>いっぱい見せたい！！だから頑張る！！
-                                            <br>独身だったら転職していなかったかも？？笑
+                    <p class="modal_comment">私の唯一の運動。それが犬の散歩。笑
+                                            <br>正直、最初は面倒だったが、1時間近く歩いていると結構な運動になる。。
+                                            <br>そして…犬に慕われる。。笑
+                                            <br>こちら的にも、例え犬でも誰かに頼られていると精神的に安定する。。
+                                            <br>実は凄く救われている。。
+                                            <br>ありがとう。。ねねちゃん。。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="beer_modal" class="modal">
+        <div id="modal_container_3" class="modal_container">
+            <div id="beer_modal_header" class="modal_header">
+                <a href="" class="modal_close" onclick="modalClose(); return false;">✖</a>
+            </div>
+            <div id="beer_modal_contents" class="modal_contents">
+                <h1 class="modal_title">Drinking Party - 飲み会 -</h1>
+                <div class="modal_item">
+                    <img src="./image/beer.jpg" alt="" class="modal_image">
+                    <p class="modal_comment">前職で意気投合した同世代の仲間たちと
+                                            <br>２ヶ月に１回のペースで開催する飲み会。
+                                            <br>お互い別の道に進んだという事もあり、
+                                            <br>近況報告が殆どで、少し昔話も。。
+                                            <br>知り合って１０年くらい経つのか。。
+                                            <br>いつも「やる気スイッチ」を押してくれて
+                                            <br>本当にありがとう！！
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="chiikawa_modal" class="modal">
+        <div id="modal_container_4" class="modal_container">
+            <div id="chiikawa_modal_header" class="modal_header">
+                <a href="" class="modal_close" onclick="modalClose(); return false;">✖</a>
+            </div>
+            <div id="chiikawa_modal_contents" class="modal_contents">
+                <h1 class="modal_title">Chiikawa - ちいかわ -</h1>
+                <div class="modal_item">
+                    <img src="./image/chiikawa.jpg" alt="" class="modal_image">
+                    <p class="modal_comment">娘の影響で出会ってしまったあいつ。。
+                                            <br>正式名称は
+                                            <br>「なんか小さくてかわいいやつ」。
+                                            <br>最初は少し可愛いなぁくらいだったが、
+                                            <br>気付けば周りはグッズばかり。。
+                                            <br>僕が好きな理由は、彼らも生活していく為に
+                                            <br>努力して、苦労して、精一杯生きている事。
+                                            <br>自分ももっと頑張ろうと思わせてくれる。。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="homeTown_modal" class="modal">
+        <div id="modal_container_5" class="modal_container">
+            <div id="homeTown_modal_header" class="modal_header">
+                <a href="" class="modal_close" onclick="modalClose(); return false;">✖</a>
+            </div>
+            <div id="homeTown_modal_contents" class="modal_contents">
+                <h1 class="modal_title">Home Town - 故郷 -</h1>
+                <div class="modal_item">
+                    <img src="./image/curry.jpg" alt="" class="modal_image">
+                    <p class="modal_comment">僕は「石川県」という田舎出身。
+                                            <br>最近はネガティブな事で有名な所。。
+                                            <br>コロナが流行ってから帰れていなかったが、
+                                            <br>先月、私用で帰る事に。。
+                                            <br>石川県民のソウルフード「チャンピオンカレー」を数年ぶりに食べる事が出来た！！
+                                            <br>やっぱり地元最高！！パワー全開！！笑
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="unity_modal" class="modal">
+        <div id="modal_container_6" class="modal_container">
+            <div id="unity_modal_header" class="modal_header">
+                <a href="" class="modal_close" onclick="modalClose(); return false;">✖</a>
+            </div>
+            <div id="unity_modal_contents" class="modal_contents">
+                <h1 class="modal_title">Unity - ユニティ -</h1>
+                <div class="modal_item">
+                    <img src="./image/unity.png" alt="" class="modal_image">
+                    <p class="modal_comment">プログラミングを好きになったキッカケ。
+                                            <br>仕事で「C＃」を使用して自分たちで簡単な業務改善アプリを作ろうとなった時に
+                                            <br>C#で何ができるのか？を調べていると大好きなゲームが作れると知り、
+                                            <br>作ってみると見事に激ハマり！！笑
+                                            <br>キャラが指示通りに動くのが面白い。。
+                                            <br>初めてキャラが前進した時は鳥肌もの！！笑
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="rubikCube_modal" class="modal">
+        <div id="modal_container_7" class="modal_container">
+            <div id="rubikCube_modal_header" class="modal_header">
+                <a href="" class="modal_close" onclick="modalClose(); return false;">✖</a>
+            </div>
+            <div id="rubikCube_modal_contents" class="modal_contents">
+                <h1 class="modal_title">Rubik Cube - ルービックキューブ -</h1>
+                <div class="modal_item">
+                    <img src="./image/rubikCube.jpg" alt="" class="modal_image">
+                    <p class="modal_comment">たまたまYouTubeを見ていたらルービックキューブの揃え方が出てきた。
+                                            <br>「誰でも出来る」との事なので、チャレンジしてみる事に。。そして何度も練習していたら何とか出来るようになった！！
+                                            <br>揃えている時は無心になれるし、何より「努力すれば一定の事は出来るようになる」と思えるようになった！！
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="ramen_modal" class="modal">
+        <div id="modal_container_8" class="modal_container">
+            <div id="ramen_modal_header" class="modal_header">
+                <a href="" class="modal_close" onclick="modalClose(); return false;">✖</a>
+            </div>
+            <div id="ramen_modal_contents" class="modal_contents">
+                <h1 class="modal_title">Favorite food - 好きな食べ物 -</h1>
+                <div class="modal_item">
+                    <img src="./image/ramen.jpg" alt="" class="modal_image">
+                    <p class="modal_comment">ベタだが、ラーメンが好きだ！！笑
+                                            <br>…マニアではなく、普通に好きだ！！笑
+                                            <br>もっと言うと「半チャンセット」が好きだ！！チャーハンも食べたい！！笑
+                                            <br>お汁も全部飲み干したい！！
+                                            <br>
+                                            <br>……まぁ、翌日…胃がもたれるが。。汗
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="book_modal" class="modal">
+        <div id="modal_container_9" class="modal_container">
+            <div id="book_modal_header" class="modal_header">
+                <a href="" class="modal_close" onclick="modalClose(); return false;">✖</a>
+            </div>
+            <div id="book_modal_contents" class="modal_contents">
+                <h1 class="modal_title">Self Help Books - 自己啓発本 -</h1>
+                <div class="modal_item">
+                    <img src="./image/book.jpg" alt="" class="modal_image">
+                    <p class="modal_comment">自分に自信がなくなった時に頼りになる物。
+                                            <br>そう！それが「自己啓発本」だ！！
+                                            <br>その中で私がお勧めするのは、
+                                            <br>「仕事は楽しいかね？」という本。
+                                            <br>かなり有名な本なので解説はしません。笑
+                                            <br>気になった方は是非読んでみてください！！
+                                            <br>人生一度きり、楽しんでいきましょう！！
                     </p>
                 </div>
             </div>
